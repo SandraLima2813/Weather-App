@@ -16,7 +16,7 @@ let days = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wedsday",
+  "Wednesday",
   "Thursday",
   "Friday",
   "Saurday"

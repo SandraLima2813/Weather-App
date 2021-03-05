@@ -45,6 +45,7 @@ currentDate.innerHTML = ` ${day}, ${month} ${date}, ${year}, ${hours}:${minutes}
 
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector ("#icon");
+  celsiusTemperature = response.data.main.temp; 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -88,11 +89,23 @@ function convertToFa(event) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
-  temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
+  temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+}
+
+function convertToCe (event) {
+  event.preventDefault(); 
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 let falink = document.querySelector("#fa-link");
 falink.addEventListener("click", convertToFa);
+
+let celink = document.querySelector("#ce-link");
+celink.addEventListener("click", convertToCe);
+
+let celsiusTemperature = null;
+
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);

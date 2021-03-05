@@ -52,3 +52,11 @@ p {
   padding: 50 px;
   border-radius: 10px;
  }
+
+ .weather-temperature .active {
+   color: black; 
+   cursor: default; 
+ }
+ .weather-temperature .active:hover {
+  text-decoration: none;
+ }

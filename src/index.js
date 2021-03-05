@@ -44,6 +44,7 @@ currentDate.innerHTML = ` ${day}, ${month} ${date}, ${year}, ${hours}:${minutes}
 
 
 function displayWeatherCondition(response) {
+  let iconElement = document.querySelector ("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -54,6 +55,11 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);   
 }
 
 function search(event) {
@@ -91,10 +97,6 @@ falink.addEventListener("click", convertToFa);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let iconElement = document.querySelector ("#icon");
 
-iconElement.setAttribute(
-  "src",
-  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-);
-iconElement.setAttribute("alt", response.data.weather[0].description);
+
+

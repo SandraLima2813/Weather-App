@@ -54,7 +54,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-currentDate.innerHTML = ` ${day}, ${month} ${date}, ${year}, ${hours}:${minutes}`;
+currentDate.innerHTML = ` Last updated: ${date} ${month}, ${hours}:${minutes}`;
 
 
 
@@ -154,9 +154,5 @@ let celink = document.querySelector("#ce-link");
 celink.addEventListener("click", convertToCe);
 
 let celsiusTemperature = null;
-
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
 search ("Porto"); 

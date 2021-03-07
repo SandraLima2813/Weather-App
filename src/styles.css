@@ -5,52 +5,64 @@ h1 {
   color: #76d1cb;
   font-family: "Open Sans Condensed", sans-serif;
   text-align: left;
+  
 }
 
 h2 {
   color: #76d1cb;
   font-family: "Open Sans", sans-serif;
+  
 }
 h3 {
   color: #c19277;
   font-family: "Open Sans", sans-serif;
+  
 }
 h4 {
   color: #91684a;
   font-family: "Open Sans", sans-serif;
+
+  
 }
 h5 {
   color: #c19277;
   font-family: "Open Sans", sans-serif;
+  
 }
 
 p {
   color: black;
   font-family: "Open Sans", sans-serif;
+  
 }
-
 
 .footer {
   position: fixed;
+  left: 0;
   bottom: 0;
-  margin-top: 200px;
+  width: 100%;
+  background-color:#c19277;
+  color: white;
+  text-align: center;
   font-family: "Open Sans", sans-serif;
-  color: #91684a;
+  font-size: small;
 }
+
 .col {
   text-align: center;
 }
-
-.container  {
-  max-width: 600px;
-  margin: 20px auto;
+.container {
+  max-width: 700px;
 }
 
 .weather-app {
   border: 1px solid #91684a ;
+  max-width: 700px;
   padding: 50 px;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 0 auto ;
+  padding-left: 20px;
+  margin-bottom: 30px;
  }
 
  .weather-temperature .active {

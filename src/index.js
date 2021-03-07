@@ -87,6 +87,8 @@ function getCurrentLocation(event) {
 function convertToFa(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
+  celink.classList.remove("active");
+  falink.classList.add("active");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
   temperatureElement.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
@@ -95,6 +97,8 @@ function convertToFa(event) {
 function convertToCe (event) {
   event.preventDefault(); 
   let temperatureElement = document.querySelector("#temperature");
+  celink.classList.add("active");
+  falink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
